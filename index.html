@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculo Gabriel Marcon Seixas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f9f7f7;
             margin: 0;
             padding: 0;
@@ -77,8 +78,13 @@
             margin-top: 50px;
         }
         .icon {
-            font-size: 18px;
-            margin-right: 10px;
+            font-size: 48px;
+            margin-right: 20px;
+            color: #008080;
+            transition: transform 0.3s ease-in-out;
+        }
+        .icon:hover {
+            transform: scale(1.2);
         }
         .info-list {
             list-style: none;
@@ -95,6 +101,58 @@
             color: #008080;
             font-size: 20px;
         }
+        .toggle-content {
+            display: none;
+        }
+        .toggle-button {
+            background-color: #008080;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .toggle-button:hover {
+            background-color: #005454;
+        }
+        .active .toggle-content {
+            display: block;
+        }
+        .highlight {
+            background-color: #e6f7ff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .highlight p {
+            margin: 0;
+            font-weight: bold;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skill {
+            flex: 0 1 calc(50% - 20px);
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .skill i {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #008080;
+        }
+        .skill-name {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+        .skill-level {
+            font-size: 16px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -106,25 +164,46 @@
         
         <section>
             <h2><i class="fas fa-user icon"></i> Resumo Profissional</h2>
-            <p>Sou um estudante dedicado de Análise e Desenvolvimento de Software, no primeiro período, com uma paixão ardente pela tecnologia e um forte desejo de aprender e crescer na área. Estou ansioso para aplicar meu conhecimento em projetos desafiadores e contribuir para o sucesso da sua empresa.</p>
+            <p>Sou um estudante apaixonado por tecnologia e desenvolvimento de software, com um forte compromisso com a excelência e a aprendizagem contínua. Estou determinado a contribuir para projetos desafiadores, aplicando minhas habilidades técnicas e minha capacidade de solucionar problemas de forma eficaz.</p>
         </section>
         
         <section>
             <h2><i class="fas fa-graduation-cap icon"></i> Educação</h2>
             <ul class="info-list">
-                <li><span>Instituição:</span> Colégio Bom Jesus Aldeia 2010 - 2018 &nbsp;&nbsp;&nbsp;&nbsp; Colégio Sesi Campo Largo 2019 - 2022 </li>
+                <li><span>Instituição:</span> Colégio Bom Jesus Aldeia (2010 - 2018), Colégio Sesi Campo Largo (2019 - 2022)</li>
                 <li><span>Curso:</span> Análise e Desenvolvimento de Software</li>
             </ul>
         </section>
         
         <section>
             <h2><i class="fas fa-briefcase icon"></i> Experiência Profissional</h2>
-            <p>Apaixonado por tecnologia e design, busco iniciar minha carreira em Desenvolvimento Front-End.</p>
+            <p>Buscando iniciar minha carreira profissional em Desenvolvimento Front-End, estou constantemente explorando novas tecnologias e aprimorando minhas habilidades por meio de projetos práticos e colaborativos.</p>
         </section>
         
         <section>
             <h2><i class="fas fa-code icon"></i> Habilidades</h2>
-            <p>HTML, CSS, Git, Python (básico), Comunicação Eficaz, Proativo, dedicado e com grande capacidade de aprendizado.</p>
+            <div class="skills">
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <span class="skill-name">HTML5</span>
+                    <span class="skill-level">Avançado</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-css3-alt"></i>
+                    <span class="skill-name">CSS3</span>
+                    <span class="skill-level">Avançado</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js"></i>
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-git-alt"></i>
+                    <span class="skill-name">Git</span>
+                    <span class="skill-level">Intermediário</span>
+                </div>
+            </div>
         </section>
         
         <section>
@@ -136,9 +215,10 @@
         </section>
         
         <footer>
-            <a href="imgcurriculo.jpg" download class="button"><i class="fas fa-download icon"></i> Baixar Currículo</a>
-            <a href="https://www.linkedin.com/in/gabriel-marcon-seixas-280872268?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bw%2BMnBYFYR8CZbbYus%2FNd2g%3D%3D" target="_blank" class="button"><i class="fab fa-linkedin icon"></i> LinkedIn</a>
-            <a href="https://github.com/gabrielmseixas" target="_blank" class="button"><i class="fab fa-github icon"></i> GitHub</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/gabriel-marcon-seixas-280872268?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bw%2BMnBYFYR8CZbbYus%2FNd2g%3D%3D" target="_blank"><i class="fab fa-linkedin icon"></i></a>
+                <a href="https://github.com/gabrielmseixas" target="_blank"><i class="fab fa-github icon"></i></a>
+            </div>
         </footer>
     </div>
 </body>
